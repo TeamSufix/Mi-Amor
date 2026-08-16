@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta
+        name="description"
+        content="A little birthday surprise made with love for Marielle."
+    >
+
+    <meta name="theme-color" content="#090509">
+
+    <title>For Mi Amor ❤️ My Love </title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,600;1,700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         GLOBAL EFFECT LAYERS
+    ========================================================== -->
+
+    <div id="global-particles" class="global-particles"></div>
+
+    <div id="toast" class="toast"></div>
+
+    <!-- =========================================================
+         PAGE 1 — HERO
+    ========================================================== -->
+
+    <main>
+
+        <section id="hero-page" class="page active">
+
+            <div class="hero-glow glow-one"></div>
+            <div class="hero-glow glow-two"></div>
+
+            <div id="hero-particles" class="page-particles"></div>
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    <span></span>
+                    A little something for you
+                    <span></span>
+                </div>
+
+                <h1 class="hero-title">
+                    Hey, Mi Amor
+                    <span>❤️</span>
+                </h1>
+
+                <p class="hero-name">
+                    Marielle Lofo
+                </p>
+
+                <p class="hero-subtitle">
+                    My love. My best friend. My everything.
+                </p>
+
+                <p class="hero-description">
+                    I know I could have simply said "Happy Birthday"...
+                    but you deserve much more than a few words.
+                </p>
+
+                <button
+                    class="btn btn-primary"
+                    data-next="message-page"
+                >
+                    <span>Open My Heart</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+
+                <div class="scroll-hint">
+                    <span class="scroll-line"></span>
+                    A little journey awaits you
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PAGE 2 — JOURNEY
+        ====================================================== -->
+
+        <section id="message-page" class="page">
+
+            <div id="message-particles" class="page-particles"></div>
+
+            <div class="journey-wrapper">
+
+                <div class="journey-counter">
+                    <span id="journey-number">01</span>
+                    <span class="counter-line"></span>
+                    <span>03</span>
+                </div>
+
+                <div class="journey-card">
+
+                    <!-- STEP 1 -->
+                    <div
+                        id="step-1"
+                        class="journey-step active"
+                    >
+
+                        <div class="step-icon">
+                            ❤️
+                        </div>
+
+                        <p class="step-small">
+                            Before anything else...
+                        </p>
+
+                        <h2>
+                            I need you to know
+                            <em>something.</em>
+                        </h2>
+
+                        <p class="step-description">
+                            You have become such a beautiful part of my life
+                            in such a short time.
+                        </p>
+
+                        <button
+                            class="btn btn-outline"
+                            onclick="nextStep(2)"
+                        >
+                            Continue
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+
+                    <!-- STEP 2 -->
+                    <div
+                        id="step-2"
+                        class="journey-step"
+                    >
+
+                        <div class="step-icon lime">
+                            ✨
+                        </div>
+
+                        <p class="step-small">
+                            Four months...
+                        </p>
+
+                        <h2>
+                            And somehow,
+                            <em>you became home.</em>
+                        </h2>
+
+                        <p class="step-description">
+                            From our conversations to those precious moments
+                            before you travelled, every little memory with you
+                            became something I hold close to my heart.
+                        </p>
+
+                        <button
+                            class="btn btn-outline"
+                            onclick="nextStep(3)"
+                        >
+                            Continue
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+
+                    <!-- STEP 3 -->
+                    <div
+                        id="step-3"
+                        class="journey-step"
+                    >
+
+                        <div class="step-icon">
+                            🎁
+                        </div>
+
+                        <p class="step-small">
+                            So, my love...
+                        </p>
+
+                        <h2>
+                            Are you ready
+                            <em>for your surprise?</em>
+                        </h2>
+
+                        <p class="step-description">
+                            I made this little world just for you.
+                            Every light, every picture, every word...
+                            all because you mean so much to me.
+                        </p>
+
+                        <button
+                            class="btn btn-primary"
+                            onclick="startCelebration()"
+                        >
+                            Let's Go
+                            <span>✨</span>
+                        </button>
+
+                    </div>
+
+                    <div class="journey-dots">
+                        <span id="journey-dot-1" class="active"></span>
+                        <span id="journey-dot-2"></span>
+                        <span id="journey-dot-3"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PAGE 3 — CELEBRATION
+        ====================================================== -->
+
+        <section id="celebration-page" class="page">
+
+            <!-- Fairy light wire -->
+            <div
+                id="fairy-lights"
+                class="fairy-lights"
+            >
+
+                <svg
+                    class="light-wire"
+                    viewBox="0 0 1200 180"
+                    preserveAspectRatio="none"
+                >
+                    <path
+                        id="wire-path"
+                        d="
+                            M0,35
+                            Q100,100 200,35
+                            T400,35
+                            T600,35
+                            T800,35
+                            T1000,35
+                            T1200,35
+                        "
+                    />
+                </svg>
+
+            </div>
+
+            <div
+                id="celebration-particles"
+                class="page-particles"
+            ></div>
+
+            <div class="celebration-content">
+
+                <div class="celebration-label">
+                    <span class="tiny-heart">♥</span>
+                    JUST FOR YOU
+                    <span class="tiny-heart">♥</span>
+                </div>
+
+                <h2 id="celebration-title">
+                    The room is dark...
+                </h2>
+
+                <p id="celebration-hint">
+                    But every beautiful story needs a little light.
+                </p>
+
+                <button
+                    id="celebration-button"
+                    class="btn btn-primary celebration-button"
+                    onclick="celebrationFlow()"
+                >
+                    <span id="celebration-button-icon">💡</span>
+                    <span id="celebration-button-text">
+                        Turn On The Lights
+                    </span>
+                </button>
+
+                <div class="celebration-progress">
+
+                    <span id="progress-1" class="active"></span>
+                    <span id="progress-2"></span>
+                    <span id="progress-3"></span>
+                    <span id="progress-4"></span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PAGE 4 — CURTAIN / LOVE LETTER
+        ====================================================== -->
+
+        <section
+            id="letter-page"
+            class="page page-no-padding"
+        >
+
+            <div id="curtain-stage" class="curtain-stage">
+
+                <!-- Curtains -->
+                <div class="curtain curtain-left">
+
+                    <div class="curtain-folds"></div>
+
+                    <div class="curtain-gold-edge"></div>
+
+                </div>
+
+                <div class="curtain curtain-right">
+
+                    <div class="curtain-folds"></div>
+
+                    <div class="curtain-gold-edge"></div>
+
+                </div>
+
+
+                <!-- Stage background -->
+
+                <div class="letter-stage">
+
+                    <div class="stage-glow"></div>
+
+                    <div class="letter-card">
+
+                        <div class="letter-top">
+
+                            <span class="letter-line"></span>
+
+                            <span class="letter-heart">
+                                ♥
+                            </span>
+
+                            <span class="letter-line"></span>
+
+                        </div>
+
+                        <p class="letter-kicker">
+                            A letter from my heart
+                        </p>
+
+                        <h2>
+                            My Dearest
+                            <span>Marielle</span>
+                        </h2>
+
+                        <div class="letter-body">
+
+                            <p>
+                                Happy Birthday to the woman who has quietly
+                                become one of the most precious parts of my life.
+                            </p>
+
+                            <p>
+                                My love, sometimes I honestly wonder how someone
+                                can come into your life in such a short amount
+                                of time and somehow leave such a huge mark on
+                                your heart.
+                            </p>
+
+                            <p>
+                                But then I think about you.
+                            </p>
+
+                            <p>
+                                I think about your beautiful mind, your heart,
+                                your strength, your ambition, and especially
+                                that incredible business mind of yours that I
+                                admire so much.
+                            </p>
+
+                            <p>
+                                I love the way you think. I love the way you
+                                dream. I love the woman you are and the woman
+                                you are becoming.
+                            </p>
+
+                            <p>
+                                And honestly, I love everything about you.
+                            </p>
+
+                            <p>
+                                Our time together before you travelled may have
+                                been short, but those moments became some of the
+                                memories I treasure the most.
+                            </p>
+
+                            <p>
+                                The conversations.
+                                The laughter.
+                                The little moments.
+                                The feeling of simply being together.
+                            </p>
+
+                            <p>
+                                They may have looked like ordinary moments to
+                                someone else, but to me they were anything but
+                                ordinary.
+                            </p>
+
+                            <p>
+                                You are special to me, Marielle.
+                            </p>
+
+                            <p>
+                                And as we continue this journey together, I
+                                want you to know that I don't take what we have
+                                for granted.
+                            </p>
+
+                            <p>
+                                I pray that God blesses this new chapter of
+                                your life beyond anything you could imagine.
+                                May He give you wisdom for every decision,
+                                strength for every challenge, courage for every
+                                dream, and favor in everything you put your
+                                hands to.
+                            </p>
+
+                            <p>
+                                May your businesses flourish.
+                                May your ideas become reality.
+                                May every door meant for you open at the right
+                                time.
+                            </p>
+
+                            <p>
+                                And when life gets difficult, I pray you always
+                                remember that you don't have to face everything
+                                alone.
+                            </p>
+
+                            <p>
+                                I want to be there for the big moments, the
+                                little moments, the victories, the challenges,
+                                the laughter, the prayers, the crazy adventures,
+                                and all the ordinary days in between.
+                            </p>
+
+                            <p>
+                                Because with you, even ordinary moments have a
+                                way of becoming extraordinary.
+                            </p>
+
+                            <p>
+                                My beautiful Marielle, my best friend, my love,
+                                and hopefully soon...
+                            </p>
+
+                            <p class="special-line">
+                                <span>my wife.</span>
+                            </p>
+
+                            <p>
+                                Happy Birthday, my love.
+                            </p>
+
+                            <p>
+                                May this year be one of the most beautiful
+                                chapters of your life.
+                            </p>
+
+                            <p>
+                                And may we have many, many more birthdays to
+                                celebrate together.
+                            </p>
+
+                            <p class="final-love">
+                                I love you.
+                                <br>
+                                More than these words could ever explain.
+                                ❤️
+                            </p>
+
+                        </div>
+
+                        <div class="letter-signature">
+
+                            <span>
+                                Forever yours,
+                            </span>
+
+                            <strong>
+                                Your Love ❤️
+                            </strong>
+
+                        </div>
+
+                        <button
+                            class="btn btn-primary gallery-button"
+                            onclick="showGallery()"
+                        >
+                            <span>Our Memories</span>
+                            <span>♡</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PAGE 5 — GALLERY
+        ====================================================== -->
+
+        <section id="gallery-page" class="page gallery-page">
+
+            <div
+                id="gallery-effects"
+                class="gallery-effects"
+            ></div>
+
+            <div class="gallery-header">
+
+                <p class="gallery-kicker">
+                    OUR LITTLE STORY
+                </p>
+
+                <h2>
+                    Us, Through
+                    <span>My Eyes</span>
+                </h2>
+
+                <p>
+                    A few moments.
+                    A thousand feelings.
+                    And memories I never want to forget.
+                </p>
+
+            </div>
+
+
+            <div class="memory-grid">
+
+                <!-- MEMORY 1 -->
+                <article class="memory-card">
+
+                    <img
+                        src="./img/Mi 1.jpg"
+                        alt="A beautiful memory of Marielle"
+                        loading="lazy"
+                    >
+
+                    <div class="memory-overlay">
+
+                        <span class="memory-number">
+                            01
+                        </span>
+
+                        <p>
+                            You are one of the most beautiful things life has
+                            given me. ❤️
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MEMORY 2 -->
+                <article class="memory-card">
+
+                    <img
+                        src="./img/Mi 2.jpg"
+                        alt="A beautiful memory of Marielle"
+                        loading="lazy"
+                    >
+
+                    <div class="memory-overlay">
+
+                        <span class="memory-number">
+                            02
+                        </span>
+
+                        <p>
+                            That smile will always have a special place in my
+                            heart.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MEMORY 3 -->
+                <article class="memory-card">
+
+                    <img
+                        src="./img/Mi 3.jpg"
+                        alt="A beautiful memory of Marielle"
+                        loading="lazy"
+                    >
+
+                    <div class="memory-overlay">
+
+                        <span class="memory-number">
+                            03
+                        </span>
+
+                        <p>
+                            My favorite person to admire, love and annoy. 😂❤️
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MEMORY 4 -->
+                <article class="memory-card">
+
+                    <img
+                        src="./img/Mi 4.jpg"
+                        alt="A beautiful memory of Marielle"
+                        loading="lazy"
+                    >
+
+                    <div class="memory-overlay">
+
+                        <span class="memory-number">
+                            04
+                        </span>
+
+                        <p>
+                            A little moment that became a beautiful memory.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MEMORY 5 -->
+                <article class="memory-card">
+
+                    <img
+                        src="./img/Mi 5.jpg"
+                        alt="A beautiful memory of Marielle"
+                        loading="lazy"
+                    >
+
+                    <div class="memory-overlay">
+
+                        <span class="memory-number">
+                            05
+                        </span>
+
+                        <p>
+                            I could spend a lifetime discovering everything
+                            that makes you you.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MEMORY 6 -->
+                <article class="memory-card">
+
+                    <img
+                        src="./img/Mi 6.jpg"
+                        alt="A beautiful memory of Marielle"
+                        loading="lazy"
+                    >
+
+                    <div class="memory-overlay">
+
+                        <span class="memory-number">
+                            06
+                        </span>
+
+                        <p>
+                            My beautiful girl. My favorite kind of distraction.
+                            ❤️
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MEMORY 7 -->
+                <article class="memory-card">
+
+                    <img
+                        src="./img/Mi 7.jpg"
+                        alt="A beautiful memory of Marielle"
+                        loading="lazy"
+                    >
+
+                    <div class="memory-overlay">
+
+                        <span class="memory-number">
+                            07
+                        </span>
+
+                        <p>
+                            Wherever life takes us, I hope we keep making
+                            memories like these.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MEMORY 8 -->
+                <article class="memory-card">
+
+                    <img
+                        src="./img/Mi 8.jpg"
+                        alt="A beautiful memory of Marielle"
+                        loading="lazy"
+                    >
+
+                    <div class="memory-overlay">
+
+                        <span class="memory-number">
+                            08
+                        </span>
+
+                        <p>
+                            My best friend, my love, and my favorite human.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MEMORY 9 -->
+                <article class="memory-card">
+
+                    <img
+                        src="./img/Mi 9.jpg"
+                        alt="A beautiful memory of Marielle"
+                        loading="lazy"
+                    >
+
+                    <div class="memory-overlay">
+
+                        <span class="memory-number">
+                            09
+                        </span>
+
+                        <p>
+                            Beautiful isn't even enough to describe you.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MEMORY 10 -->
+                <article class="memory-card">
+
+                    <img
+                        src="./img/Mi 10.jpg"
+                        alt="A beautiful memory of Marielle"
+                        loading="lazy"
+                    >
+
+                    <div class="memory-overlay">
+
+                        <span class="memory-number">
+                            10
+                        </span>
+
+                        <p>
+                            Here's to every adventure still waiting for us.
+                            🥂
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MEMORY 11 -->
+                <article class="memory-card">
+
+                    <img
+                        src="./img/Mi 11.jpg"
+                        alt="A beautiful memory of Marielle"
+                        loading="lazy"
+                    >
+
+                    <div class="memory-overlay">
+
+                        <span class="memory-number">
+                            11
+                        </span>
+
+                        <p>
+                            If I had to choose again, I would still choose you.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MEMORY 12 -->
+                <article class="memory-card">
+
+                    <img
+                        src="./img/Mi 12.jpg"
+                        alt="A beautiful memory of Marielle"
+                        loading="lazy"
+                    >
+
+                    <div class="memory-overlay">
+
+                        <span class="memory-number">
+                            12
+                        </span>
+
+                        <p>
+                            The best part of the story is that we're still
+                            writing it.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MEMORY 13 -->
+                <article class="memory-card memory-last">
+
+                    <img
+                        src="./img/Mi 13.jpeg"
+                        alt="A beautiful final memory of Marielle"
+                        loading="lazy"
+                    >
+
+                    <div class="memory-overlay">
+
+                        <span class="memory-number">
+                            13
+                        </span>
+
+                        <p>
+                            This isn't the end of our story.
+                            It's only the beginning. ❤️
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- FINAL MESSAGE -->
+
+            <div class="gallery-ending">
+
+                <div class="ending-glow"></div>
+
+                <span class="ending-heart">
+                    ♥
+                </span>
+
+                <p class="ending-small">
+                    AND IF I COULD SAY ONE MORE THING...
+                </p>
+
+                <h3>
+                    I would choose
+                    <span>you.</span>
+                </h3>
+
+                <p>
+                    Today.
+                    Tomorrow.
+                    And every beautiful ordinary day after that.
+                </p>
+
+                <div class="ending-signature">
+                    Always yours,
+                    <strong>❤️</strong>
+                </div>
+
+                <button
+                    class="btn btn-outline replay-button"
+                    onclick="replayExperience()"
+                >
+                    ↻ Replay Our Story
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         AUDIO
+    ========================================================== -->
+
+    <audio
+        id="birthday-audio"
+        loop
+        preload="auto"
+    >
+        <source
+            src="./mp3/Ordinary.mp3"
+            type="audio/mpeg"
+        >
+    </audio>
+
+
+    <!-- =========================================================
+         LIGHTBOX
+    ========================================================== -->
+
+    <div
+        id="memory-lightbox"
+        class="lightbox"
+        aria-hidden="true"
+    >
+
+        <button
+            class="lightbox-close"
+            onclick="closeLightbox()"
+            aria-label="Close image"
+        >
+            ×
+        </button>
+
+        <img
+            id="lightbox-image"
+            src=""
+            alt=""
+        >
+
+        <div
+            id="lightbox-message"
+            class="lightbox-message"
+        ></div>
+
+    </div>
+
+
+    <script src="./js/script.js"></script>
+
+</body>
+</html>
