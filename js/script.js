@@ -249,9 +249,16 @@ function activateProgress(step) {
 function playMusic() {
   const audio = document.getElementById("birthday-audio");
 
-  if (!audio) return;
+  if (!audio) {
+    console.error("Birthday audio element not found.");
+    showToast("I couldn't find our song. ❤️");
+    return;
+  }
 
-  audio.volume = 0;
+  // Make sure the browser knows exactly where the file is
+  console.log("Audio source:", audio.currentSrc || audio.querySelector("source")?.src);
+
+  audio.volume = 0.65;
 
   const playPromise = audio.play();
 
@@ -260,16 +267,17 @@ function playMusic() {
       .then(() => {
         musicStarted = true;
 
-        fadeAudioIn(audio);
+        console.log("Ordinary.mp3 is now playing ❤️");
 
         showToast("Now playing: Ordinary ❤️");
       })
-      .catch(() => {
-        showToast("Tap the music button once more to play the song.");
+      .catch((error) => {
+        console.error("Audio playback failed:", error);
+
+        showToast("Tap Play Our Song again ❤️");
       });
   }
 }
-
 /* =========================================================
    AUDIO FADE
 ========================================================= */
